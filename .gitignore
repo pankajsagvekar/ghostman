@@ -12,6 +12,7 @@ node_modules
 .DS_Store
 Thumbs.db
 .vscode/
+src-tauri\Cargo.lock
 
 # Env
 .env
