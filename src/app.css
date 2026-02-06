@@ -9,30 +9,48 @@
 	--color-put: #fbbf24; /* Subtle yellow */
 	--color-delete: #f87171; /* Subtle red */
 	--color-patch: #c084fc; /* Subtle purple */
+	
+	/* Charcoal Dark Theme - specific shades */
+	--color-base-dark: #121212;
+	--color-base-charcoal: #1e1e1e;
+	--color-base-sidebar: #181818;
+	--color-base-border: #2a2a2a;
+	--color-base-hover: #262626;
+	--color-base-accent: #3b82f6; /* Blue accent */
 }
 
 @layer base {
 	:root {
-		--pro-border: rgba(var(--color-surface-500), 0.15);
-		--pro-bg: rgba(var(--color-surface-500), 0.05);
+		--pro-border: var(--color-base-border);
+		--pro-bg: var(--color-base-dark);
+		color-scheme: dark;
 	}
 }
 
 .status-badge-pro {
-	@apply px-3 py-1 rounded-md font-bold text-xs flex items-center gap-2 border border-black/5 transition-all duration-200 shadow-sm;
+	@apply px-3 py-1 rounded-md font-bold text-xs flex items-center gap-2 border border-white/5 transition-all duration-200 shadow-sm;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-	width: 6px;
-	height: 6px;
+	width: 5px;
+	height: 5px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
 	background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-	background: rgba(var(--color-surface-500), 0.1);
+	background: #333;
 	border-radius: 10px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-	background: rgba(var(--color-surface-500), 0.2);
+	background: #444;
+}
+
+/* Global focus and input styles */
+input:focus, select:focus, textarea:focus {
+	outline: none;
+}
+
+.mono {
+	font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
