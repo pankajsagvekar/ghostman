@@ -9,7 +9,7 @@
 	--color-put: #fbbf24; /* Subtle yellow */
 	--color-delete: #f87171; /* Subtle red */
 	--color-patch: #c084fc; /* Subtle purple */
-	
+
 	/* Charcoal Dark Theme - specific shades */
 	--color-base-dark: #121212;
 	--color-base-charcoal: #1e1e1e;
@@ -28,7 +28,7 @@
 }
 
 .status-badge-pro {
-	@apply px-3 py-1 rounded-md font-bold text-xs flex items-center gap-2 border border-white/5 transition-all duration-200 shadow-sm;
+	@apply flex items-center gap-2 rounded-md border border-white/5 px-3 py-1 text-xs font-bold shadow-sm transition-all duration-200;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -47,7 +47,9 @@
 }
 
 /* Global focus and input styles */
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
 	outline: none;
 }
 
